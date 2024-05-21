@@ -252,8 +252,24 @@ function join(stringOne, stringTwo) {
  *
  * TIP: What property of the String do we need to compare?
  */
+
+/*
+I: FUNCTION INPUTS TWO PARAMETERS - BOTH ARE STRINGS
+O: FUNCTION OUTPUTS THE LONGEST OF THE TWO STRINGS
+C: FUNCTION EXPECTS TO RECEIVE TWO STRINGS OF DIFFERENT LENGTHS
+E: N/A
+*/
+
+
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+
+    // use an if else statement to compare the lengths of the strings and return the longer string
+    if (stringOne.length > stringTwo.length) {
+        return stringOne;
+    } else {
+        return stringTwo;
+    }
 
 
 
@@ -267,6 +283,15 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
+/*
+I: 
+O: 
+C: 
+E: 
+*/
+
+
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
