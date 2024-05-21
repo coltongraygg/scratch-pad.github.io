@@ -15,9 +15,23 @@
 /** 
  * Given an input value, print the value to the screen using console.log().
  */
+
+
+/* 
+
+I: Function takes in any value.
+O: Function prints the value using console.log 
+C: N/A
+E: N/A
+
+*/
+
+
 function print(value) {
   // YOUR CODE BELOW HERE //
   
+  // use console.log to print the value
+  console.log(value);
   
   // YOUR CODE ABOVE HERE //
 }

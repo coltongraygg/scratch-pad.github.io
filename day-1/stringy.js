@@ -285,16 +285,25 @@ function longest(stringOne, stringTwo) {
  */
 
 /*
-I: 
-O: 
-C: 
-E: 
+I: FUNCTION INPUTS TWO PARAMETERS AS STRINGS
+O: FUNCTION DETERMINES WHICH PARAMETER STRING IS HIGHER IN ALPHABETICAL ORDER. FUNCTION RETURNS -1 IF THE SECOND PARAM IS HIGHER, OTHERWISE RETURN 1, IF THEY'RE EQUAL RETURN 0. 
+C: FUNCTION EXPECTS STRING PARAMS
+E: N/A
 */
 
 
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    // IF STRING ONE IS ALPHABETICALLY HIGHER THAN STRING TWO RETURN -1
+    if (stringOne > stringTwo) {
+        return -1;
+    }  // IF STRING ONE IS ALPHABETICALY LOWER THAN STRING TWO RETURN 1
+    if (stringOne < stringTwo) {
+        return 1;
+    } // IF STRING ONE AND TWO ARE EQUAL IN ALPHABETICAL ORDER RETURN 0
+    if (stringOne = stringTwo) {
+        return 0;
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -308,10 +317,27 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
+/* 
+I: FUNCTION INPUTS TWO PARAMETERS AS STRINGS
+O: FUNCTION DETERMINES WHICH PARAMETER STRING IS LOWER IN ALPHABETICAL ORDER. FUNCTION RETURNS 1 IF PARAM 1 IS LOWER IN ALPHABETICAL ORDER THAN PARAM 2. FUNCTION RETURNS -1 IF THE SECOND PARAM IS LOWER IN ALPHABETICAL ORDER THAN PARAM 1. OTHERWISE RETURN 0. 
+C: FUNCTION EXPECTS TWO STRINGS AS PARAMS
+E: N/A
+*/
+
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    // if string one is alphabetically lower than string two, return 1
+    if (stringOne < stringTwo) {
+        return -1;
+    } 
+    if (stringOne > stringTwo) {
+        return 1;
+    }
+    if (stringOne = stringTwo) {
+        return 0;
+    }
+    
 
 
     // YOUR CODE ABOVE HERE //
