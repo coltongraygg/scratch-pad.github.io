@@ -101,22 +101,35 @@ function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
   // create for in loop
   for (var key in object) {
-    console.log(object[key]);
-    return object;
+    // log the key in object
+    console.log(key);
   }
-  
- 
-  
+  return; 
+
   // YOUR CODE ABOVE HERE //
 }
+
+/*
+I: FUNCTION RECEIVES AN OBJECT AS THE PARAMETER
+O: FUNCTION OUTPUTS AN ARRAY CONTAINING THE OBJECT'S VALUES
+C: FUNCTION EXPECTS TO RECEIVE AN OBJECT WITH VALUES
+E: N/A
+*/
+
 
 /** 
  * Given an input Object, return an Array containing the Object's values.
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  // create an empty storage array
+  let storageArr = [];
+  // iterate over the object
+  for (var key in object) {
+    // push the object values into storageArr
+    storageArr.push(object[key]);
+  }
+  return storageArr;  // return storageArr
   
   
   // YOUR CODE ABOVE HERE //
@@ -126,9 +139,22 @@ function getObjectValues(object) {
  * Given an input Object, loop over the Object and print its values 
  * using console.log().
  */
+
+/*
+I: FUNCTION RECEIVES AN OBJECT
+O: FUNCTION OUTPUTS THE OBJECTS VALUES AND PRINTS TO CONSOLE
+C: FUNCTION EXPECTS AN OBJECT WITH VALUES
+E: N/A
+*/
+
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  // iterate through the object
+  for (var key in object) {
+    // print the values to console
+    console.log(object[key]);
+  }
+  return; // return the function
   
   
   
@@ -138,10 +164,26 @@ function printObjectValues(object) {
 /** 
  * Given an input Object, return the number of key/value pairs stored within that Object.
  */
+
+/* 
+I: FUNCTION RECEIVES AN OBJECT
+O: FUNCTION OUTPUTS THE NUMBER OF KEY VALUE PAIRS STORED IN THE OBJECT
+C: FUNCTION EXPECTS TO RECEIVE AN OBJECT WITH KEY VALUE PAIRS
+E: N/A
+*/
+
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  // create a count variable to keep track of how many key/value pairs are in object
+  let count = 0;
+  // iterate over the object
+  for (var key in object) {
+    // if object has key add 1 numerical data value to the count
+    if (object.hasOwnProperty(key)) {
+      count++;
+    }
+  }
+return count; // return the final count when function has executed to completion
   
   
   // YOUR CODE ABOVE HERE //
@@ -151,9 +193,23 @@ function getObjectLength(object) {
  * Given an input Object, how might we loop over the Object IN REVERSE and 
  * print its values using console.log()?
  */
+
+
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  // create storage array
+  let storage = [];
+  // iterate through the object
+  for (var key in object) {
+    // push the key into storage array
+    storage.push(object[key]);
+  }
+
+  // loop through the new storage array in reverse
+  for (var i = storage.length -1; i >= 0; i--) {
+    // log the current index of the array to console
+    console.log(storage[i]);
+  }
   
   
   
