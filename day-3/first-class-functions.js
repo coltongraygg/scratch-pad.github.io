@@ -77,6 +77,11 @@ function modifyStrings(strings, modify) {
     // YOUR CODE ABOVE HERE //
 }
 
+modifyStrings(['alex', 'francis', 'aaron'], function(string) { return string + "!"});
+// RETURNS => ['alex!', 'francis!', 'aaron!']
+
+modifyStrings(['alex', 'francis', 'aaron'], function(string){ return string.toUpperCase()});
+// RETURNS => ['ALEX', 'FRANCIS', 'AARON']
 
 
 /** 
@@ -96,6 +101,11 @@ function allStringsPass(strings, test) {
     
     // YOUR CODE ABOVE HERE //
 }
+
+// RETURNS => true (because all strings begin with 'a')
+
+allStringsPass(['alex', 'francis', 'aaron'], function(string) { return string[0] === 'a'});
+// RETURNS => false (because one of the strings doesn't begin with 'a')
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

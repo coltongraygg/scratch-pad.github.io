@@ -16,7 +16,7 @@
 /*
 
 I: Function inputs a string with any value.
-O: Functino outputs the length of the string in numerical value. 
+O: Function outputs the length of the string in numerical value. 
 C: Function expects to receive a string.
 E: N/A
 

@@ -31,11 +31,15 @@ function isArray(value) {
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
  * 
+ *  *HINT* LOOK UP HOW TO FIGURE OUT IF SOMETHING IS AN INSTANCE OF THE DATE OBJECT
+ * 
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     
 
+    // use typeof to determine if it's an object && it's not an array
+    // AND it's not null AND it's not an instance of the date object
     
     
     // YOUR CODE ABOVE HERE //
