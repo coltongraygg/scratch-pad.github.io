@@ -84,8 +84,8 @@ E: N/A
 
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    // create if statement checking if value param is object and not null
-    if (typeof value === 'object' && value !== null) { 
+    // create if statement checking if value param is object, not null, and not a Date object.
+    if (typeof value === 'object' && value !== null && !(value instanceof Date)) { 
         return true; // returns true
     } else if (Array.isArray(value)) { // else if statement to check if param is an array
         return true; // return true
@@ -94,11 +94,6 @@ function isCollection(value) {
     // YOUR CODE ABOVE HERE //
 }
 
-console.log(isCollection({}));
-console.log(isCollection([]));
-console.log(isCollection(null));
-console.log(isCollection(42));
-console.log(isCollection('string'));
 /**
  * Given an input value, return the type of the value as a String
  * 
