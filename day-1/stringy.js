@@ -58,14 +58,13 @@ function toLowerCase(string) {
 /**
  * Given an input String, return a new String forced to uppercase.
  */
-
+//
 /*
 I: FUNCTION INPUTS A STRING WITH ANY VALUE
 O: FUNCTION OUTPUTS THE ORIGINAL STRING WITH ALL CHARACTERS CONVERTED TO UPPERCASE
 C: FUNCTION DOES NOT EXPECT NUMERICAL VALUES OR A STRING WITH NO LOWERCASE CHARACTERS
 E: N/A
 */
-
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
     
