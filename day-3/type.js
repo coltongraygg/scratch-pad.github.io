@@ -14,15 +14,22 @@
  * 
  * HINT: There is a method that can help with this.
  */
+
+/*
+I: FUNCTION RECEIVES A DATATYPE AS PARAMETER
+O: FUNCTION RETURNS TRUE IF THE INPUT PARAM IS AN ARRAY, FALSE OTHERWEISE
+C: FUNCTION EXPECTS TO RECEIVE A DATA TYPE IN THE PARAM
+E: N/A
+*/
+
+
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    // Return boolean value using Array.isArray() 
+    return Array.isArray(value);
     
     // YOUR CODE ABOVE HERE //
 }
-
 /** 
  * Given an input value, return true if the value is an Object intended as a 
  * collection, false if otherwise.
@@ -34,10 +41,23 @@ function isArray(value) {
  *  *HINT* LOOK UP HOW TO FIGURE OUT IF SOMETHING IS AN INSTANCE OF THE DATE OBJECT
  * 
  */
+
+/*
+I: FUNCTION RECEIVES A DATA TYPE AS THE PARAM
+O: FUNCTION OUTPUTS A BOOLEAN VALUE DEPENDING ON IF THE DATA IN PARAM IS AN OBJECT
+C: FUNCTION EXPECTS A DATA TYPE AS THE PARAM
+E: N/A
+*/
+
+
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
+    return typeof value === 'object' && // Return boolean value if value is an object and...
+    value !== null && // value is not null and...
+    !Array.isArray(value) && // value is not an array and...
+    !(value instanceof Date); // value is not an instance of the date object
 
+    // value instanceof Date
     // use typeof to determine if it's an object && it's not an array
     // AND it's not null AND it's not an instance of the date object
     
@@ -53,15 +73,32 @@ function isObject(value) {
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
+
+/* 
+I: FUNCTION RECEIVES A DATA TYPE
+O: FUNCTION RETURNS A BOOLEAN VALUE - TRUE IF THE PARAM IS AN ARRAY OR AN OBJECT, FALSE OTHERWISE
+C: FUNCTION EXPECTS TO RECEIVE A DATA TYPE IN THE PARAM
+E: N/A
+*/
+
+
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    // create if statement checking if value param is object and not null
+    if (typeof value === 'object' && value !== null) { 
+        return true; // returns true
+    } else if (Array.isArray(value)) { // else if statement to check if param is an array
+        return true; // return true
+    } return false; // return false otherwise
     
     // YOUR CODE ABOVE HERE //
 }
 
+console.log(isCollection({}));
+console.log(isCollection([]));
+console.log(isCollection(null));
+console.log(isCollection(42));
+console.log(isCollection('string'));
 /**
  * Given an input value, return the type of the value as a String
  * 
