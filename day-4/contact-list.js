@@ -37,22 +37,34 @@
 function makeContact(id, nameFirst, nameLast) {
     
 } 
-
+// {id: 1, nameFirst: 'colton', nameLast: 'gray'} for above
+// imagine there is an array somewhere called contacts and every function created is doing something to that array
+// first thing is creating a method addContact
 
 function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts= [];
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        }, 
+        addContact: function(contact) {
+            contacts.push(contact);
+        }, 
+        findContact: function(fullName) {
+
         }
     }
 }
 
+/*
+    length: function() {
+        return contacts.length;
+    }
 
 
 
