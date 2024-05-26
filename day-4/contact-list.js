@@ -35,8 +35,20 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+    // Declare an object
+    var obj = {};
+    // Create key value pairs for the object
+    obj.id = id; 
+    obj.nameFirst = nameFirst;
+    obj.nameLast = nameLast;
+    // Return the object
+    return obj; 
 } 
+
+// TESTING
+console.log(makeContact(1, 'Colton', 'Gray')); // Success
+
+
 // {id: 1, nameFirst: 'colton', nameLast: 'gray'} for above
 // imagine there is an array somewhere called contacts and every function created is doing something to that array
 // first thing is creating a method addContact
@@ -56,15 +68,48 @@ function makeContactList() {
             contacts.push(contact);
         }, 
         findContact: function(fullName) {
+            // loop through the contacts array
+            for (var i = 0; i < contacts.length; i++) {
+                // create a variable initialized with the first name and last name of i concatenated
+                var contactFullName = contacts[i].nameFirst + ' ' + contacts[i].nameLast;
+                // check to see if the contactFullName is equal to the fullName param value
+                if (contactFullName === fullName) {
+                    return contacts[i];
+                }
+            }
+            // return undefined otherwise
+            return undefined;
 
+        },
+        removeContact: function(contact) {
+            // loop through the array
+            for (var i = 0; i < contacts.length; i++) {
+                // find the index where (contact) param value is
+                if (contacts[i] === contact) {
+                    // if found, remove that index from the array
+                    contacts.splice(i ,1);
+                    // exit the loop when complete
+                    break; 
+                }
+            }
+
+        },
+        printAllContactNames: function() { // COME BACK TO THIS
+
+            // create a variable to store all the concatenated firstNames and lastNames
+            var allNames = '';
+            // loop through the contacts array
+            for (var i = 0; i < contacts.length; i++) {
+
+            }
+
+            
+            }
         }
     }
-}
 
-/*
-    length: function() {
-        return contacts.length;
-    }
+
+
 
 
 
