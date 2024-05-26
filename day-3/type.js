@@ -113,13 +113,59 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */ 
+
+/*
+I: FUNCTION RECEIVES A DATA TYPE
+O: FUNCTION OUTPUTS A STRING STATING WHAT DATA TYPE WAS INPUT
+C: FUNCTION EXPECTS TO RECEIVE ONE DATA TYPE ONLY
+E: N/A
+*/
+
+
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+// create a series of if else statements
+    // if value is string
+    if (typeof value === 'string') {
+        return 'string'; // return 'string'
+        // else if value is an array
+    } else if (Array.isArray(value)) {
+        return 'array'; // return 'array'
+        // else if value is an object, and not null and not a Date value
+    } else if (typeof value === 'object' && value !== null && !(value instanceof Date)) {
+        return 'object'; // return 'object'
+        // else if value is null and not undefined
+    } else if (typeof value === 'null' && value !== 'undefined') {
+        return 'null'; // return 'null
+        // else if value is undefined and not null
+    } else if (typeof value === 'undefined' && value !== 'null') {
+        return 'undefined'; // return 'undefined'
+        // else if value is a number
+    } else if (typeof value === 'number') {
+        return 'number'; // return 'number'
+        // else if value is a boolean value
+    } else if (typeof value === 'boolean') {
+        return 'boolean'; // return 'boolean'
+        // else if value is a function
+    } else if (typeof value === 'function') {
+        return 'function'; // return 'function'
+        // else if value is a Date property
+    } else if (value instanceof Date) {
+        return 'date'; // return 'date'
+        // else if value is null
+    } else if (value === null) {
+        return 'null'; // return 'null'
+    }
+
     // YOUR CODE ABOVE HERE //
+}
+
+
+// DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
+if((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
+    // here, export any references you need for tests //
+    module.exports.typeOf = typeOf;
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
