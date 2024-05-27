@@ -100,8 +100,16 @@ function makeContactList() {
             var allNames = '';
             // loop through the contacts array
             for (var i = 0; i < contacts.length; i++) {
-
-            }
+                // create variable for concatenating each first and last name per loop
+                var contactFullName = contacts[i].nameFirst +  ' ' + contacts[i].nameLast;
+                // add it to allNames variable per loop
+                allNames += contactFullName;
+                // add a line break after each loop, except for the last name
+                if (i < contacts.length -1) {
+                    allNames += '\n';
+                }
+                // return allNames
+            } return allNames;
 
             
             }
